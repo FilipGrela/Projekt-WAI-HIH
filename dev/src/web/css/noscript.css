@@ -1,0 +1,45 @@
+noscript{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+noscript .blur{
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+noscript .noscript-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+noscript .click-me{
+    margin-top: 3rem;
+    background-color: var(--color-accent-1);
+    border: var(--color-border);
+    border-radius: 5rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+noscript a .click-me:hover{
+    background-color: var(--color-triatriary);
+    border: var(--color-border);
+    color: var(--color-accent-1);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
