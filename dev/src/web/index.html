@@ -6,25 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Filip Grela</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/footer.css">
-        <link rel="icon" href="img/icons/travel.png" type="image/x-icon">
+    <link rel="icon" href="img/icons/travel.png" type="image/x-icon">
+    <script src="build/script.js"></script>
 </head>
 <body >
 <header >
-    <a href="/" class="logo">Moje hobby</a>
-    <nav class="navbar">
+    <a href="/" class="logo slide-in-right">Moje hobby</a>
+    <nav class="navbar slide-in-left">
         <div class="btn">
             <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
         </div>
         <div class="menu_items">
             <a href="/" class="active">Strona główna</a>
             <a href="/food.html">Jedzenie</a>
-            <a href="#">Course</a>
+            <a href="/gallery.htm">Galeria</a>
             <a href="#">About</a>
         </div>
     </nav>
-    <div class="btn">
-        <img  style="width:100%;" class="menu-btn" alt="Menu" width="100%" src="img/icons/bars-solid.svg">
+    <div class="btn slide-in-left">
+        <img  style="width:100%;" class="menu-btn" alt="Menu" src="img/icons/bars-solid.svg">
     </div>
 </header>
 
@@ -48,12 +50,12 @@
 </div>
 
 
-<div class="section center" >
+<div id="section-introduction" class="section center slide-in-up" >
     <div class="content-container border">
         <div class="grid-container">
             <div>
                 <div class="img-wrapper">
-                    <img src="img/traveler.jpg">
+                    <img alt="Picture" src="img/traveler.jpg">
                 </div>
             </div>
             <div>
@@ -78,8 +80,8 @@
     <hr>
 </div>
 
-<div class="article-section border">
-    <div class="section center" >
+<div id="section-mountains" class="article-section border">
+    <div class="section center slide-in-up" >
         <div class="content-container border">
             <div class="grid-container">
                 <div>
@@ -87,12 +89,12 @@
                     <p><span class="first-letter">T</span>atry to miejsce, do którego wracam z wielką radością. Z każdym kolejnym wyjazdem odkrywam w nich coś nowego – majestatyczne szczyty, dziką przyrodę oraz spokój, którego nie znajdzie się nigdzie indziej. Opowiem o moich ulubionych trasach w polskich i słowackich Tatrach, wspomnę o najważniejszych momentach, które przeżyłem na szlakach oraz podzielę się poradami dla tych, którzy chcą rozpocząć swoją przygodę z górami.</p>
                 </div>
                 <div class="img-wrapper">
-                    <img src="img/tatra.jpg">
+                    <img alt="Picture" src="img/tatra.jpg">
                 </div>
             </div>
         </div>
     </div>
-    <div class="section center" >
+    <div class="section center slide-in-up" >
         <div class="content-container border">
             <div class="grid-container">
                 <div>
@@ -100,12 +102,12 @@
                     <p><span class="first-letter">N</span>arciarstwo to kolejna pasja, która dodaje mi energii i pozwala poczuć prawdziwą wolność. Zimą wyruszam na stoki, by zjeżdżać po śnieżnych zboczach w Polsce, Słowacji, a także w Alpach. Chociaż narciarstwo wymaga umiejętności i wytrwałości, to daje niesamowitą satysfakcję, gdy doskonalisz technikę i zdobywasz nowe szczyty. W tej sekcji opowiem o moich doświadczeniach, ulubionych miejscach do jazdy na nartach oraz tym, jak narciarstwo wpływa na moje życie.</p>
                 </div>
                 <div class="img-wrapper">
-                    <img src="img/ski.webp">
+                    <img alt="Picture" src="img/ski.webp">
                 </div>
             </div>
         </div>
     </div>
-    <div class="section center" >
+    <div class="section center slide-in-up" >
         <div class="content-container border">
             <div class="grid-container">
                 <div>
@@ -113,7 +115,7 @@
                     <p><span class="first-letter">A</span>lpy to jedno z najbardziej ikonicznych miejsc dla miłośników narciarstwa. Szerokie stoki, świetnie przygotowane trasy i niesamowite widoki sprawiają, że jazda na nartach w Alpach to zupełnie nowe doświadczenie. W mojej pracy opowiem o mojej pierwszej wyprawie do Alp, o tym, jak różni się narciarstwo w Polsce od tego w austriackich, włoskich czy szwajcarskich Alpach, oraz jakie wrażenia przynosi jazda po śnieżnych zboczach najwyższych gór Europy.</p>
                 </div>
                 <div class="img-wrapper">
-                    <img src="img/alps.jpg">
+                    <img alt="Picture" src="img/alps.jpg">
                 </div>
             </div>
         </div>
@@ -126,18 +128,18 @@
                     <p><span class="first-letter">T</span>atry i Alpy to dwie zupełnie różne krainy, które kocham równie mocno, ale z innych powodów. Tatry to dla mnie miejsce spokoju i refleksji, zaś Alpy symbolizują przygodę i wyzwanie. W tej części przedstawię porównanie obu tych miejsc, ich wyjątkowe cechy i to, dlaczego warto odwiedzać zarówno polskie i słowackie Tatry, jak i majestatyczne Alpy.</p>
                 </div>
                 <div class="img-wrapper">
-                    <img src="img/tatry-czy-alpy.jpg">
+                    <img alt="Picture" src="img/tatry-czy-alpy.jpg">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="section  center" >
+<div id="section-europe" class="section  center" >
     <div class="content-container border">
         <div class="grid-container">
             <div class="img-wrapper">
-                <img src="img/croatia.jpeg">
+                <img alt="Picture" src="img/croatia.jpeg">
             </div>
             <div>
                 <h1>Europa – Kontynent Możliwości</h1>
@@ -155,7 +157,7 @@
                 <p><span class="first-letter">P</span>asja to coś, co nadaje życiu sens. Dzięki podróżom i narciarstwu odkryłem, jak ważne jest, by mieć w życiu coś, co nas motywuje i inspiruje. W tej części opowiem, jak te pasje wpłynęły na mój rozwój osobisty, czego nauczyły mnie podróże, i jak sport pozwala mi utrzymać zdrowy balans w codziennym życiu.</p>
             </div>
             <div class="img-wrapper" >
-                <img src="img/reflective-road-journey-stockcake.jpg">
+                <img alt="Picture" src="img/reflective-road-journey-stockcake.jpg">
             </div>
         </div>
         <p style="white-space: pre-line;"><b>Podsumowanie:</b> Moje pasje – podróże i narciarstwo – to nie tylko sposób na spędzanie wolnego czasu, ale przede wszystkim ścieżka, która kształtuje mnie jako osobę. Dają mi radość, inspirację i motywację do odkrywania świata oraz własnych możliwości.</p>
@@ -175,5 +177,4 @@
     <p>Filip Grela - Projekt WAI 2024</p>
 </footer>
 </body>
-<script src="build/script.js"></script>
 </html>
