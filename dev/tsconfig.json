@@ -1,14 +1,20 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "Node",
     "sourceMap": true,
-    "outDir": "src/web/build"
+    "outDir": "src/web/build",
+    "lib": [
+      "es2015",
+      "dom"
+    ]
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
-    "src/web/scripts/**/*"
+    "src/web/scripts/**/*.ts" // Include all TS files in scripts folder and subfolders
   ]
+
 }

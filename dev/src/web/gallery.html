@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <link rel="icon" href="img/icons/travel.png" type="image/x-icon">
     <script src="build/script.js"></script>
 </head>
@@ -19,6 +20,9 @@
             <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
         </div>
         <div class="menu_items">
+            <div class="dark-light-btn">
+                <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">
+            </div>
             <a href="/">Strona główna</a>
             <a href="/food.html">Jedzenie</a>
             <a href="/gallery.html" class="active">Galeria</a>
@@ -43,6 +47,67 @@
 </noscript>
 
 
+<div id="app" style="display: block">
+    <div class="pswp-gallery" id="my-gallery">
+        <a
+                href="img/gallery/gal-1.webp"
+                data-pswp-width="2500"
+                data-pswp-height="1613"
+                target="_blank"
+        >
+            <img
+                    src="img/gallery/gal-1.webp"
+                    alt="Photo"
+            />
+        </a>
+        <a
+                href="img/gallery/gal-2.webp"
+                data-pswp-width="2500"
+                data-pswp-height="1666"
+                target="_blank"
+        >
+            <img
+                    src="img/gallery/gal-2.webp"
+                    alt=""
+            />
+        </a>
+        <a
+                href="img/gallery/gal-3.webp"
+                data-pswp-width="2500"
+                data-pswp-height="1359"
+                target="_blank"
+        >
+            <img
+                    src="img/gallery/gal-3.webp"
+                    alt=""
+            />
+        </a>
+        <a
+                href="img/gallery/gal-4.webp"
+                data-pswp-width="2500"
+                data-pswp-height="1666"
+                target="_blank"
+        >
+            <img
+                    src="img/gallery/gal-4.webp"
+                    alt=""
+            />
+        </a>
+        <a
+                href="img/gallery/gal-5.webp"
+                data-pswp-width="2500"
+                data-pswp-height="1666"
+                target="_blank"
+        >
+            <img
+                    src="img/gallery/gal-5.webp"
+                    alt=""
+            />
+        </a>
+    </div>
+</div>
+
+
 <footer class="footer">
     <!--    <div class="waves">-->
     <!--        <div class="wave" id="wave1"></div>-->
@@ -52,5 +117,6 @@
     <!--    </div>-->
     <p>Filip Grela - Projekt WAI 2024</p>
 </footer>
+<script type="module" src="build/gallery.js"></script>
 </body>
 </html>
