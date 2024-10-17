@@ -1,0 +1,38 @@
+ol.main-list, ol.region-list {
+    margin-bottom: 5px;
+}
+
+ol li {
+    margin-bottom: 5px;
+    font-size: 18px;
+    list-style-type: decimal;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-text-selected);
+}
+
+ol ol {
+    margin-left: 20px;
+    list-style-type: lower-roman;
+}
+
+ol ol li {
+    font-size: 16px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.container li:hover {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+}
