@@ -13,6 +13,24 @@
     --color-line: #3a3b47;
 }
 
+a:link {
+    color: #2350a5;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #5323a5;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #18356e;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 section{
     width: 100%;
 }
@@ -142,6 +160,10 @@ body {
     background-position: center center;
 }
 
+input{
+    color: var(--color-triatriary);
+}
+
 .menu_items{
     display: flex;
     align-items: center;
@@ -157,7 +179,7 @@ body {
     filter: invert(100%) sepia(25%) saturate(414%) hue-rotate(200deg) brightness(116%) contrast(100%);
 }
 
-.first-letter {
+p::first-letter {
     font-size: 1.5rem;
 }
 .article-section{
