@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/table-of-content.css">
     <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/nav-menu.css">
     <link rel="icon" href="img/icons/travel.png" type="image/x-icon">
     <script src="build/script.js"></script>
 </head>
@@ -20,13 +21,12 @@
         <div class="btn">
             <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
         </div>
-
         <div class="menu_items">
             <div class="dark-light-btn">
                 <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">
             </div>
-            <a href="/" >Strona główna</a>
-            <a href="/food.html" class="active">Jedzenie</a>
+            <a href="/">Strona główna</a>
+            <a class="active" href="/food.html">Jedzenie</a>
             <a href="/gallery.html">Galeria</a>
             <a href="#">About</a>
         </div>
@@ -61,9 +61,9 @@
     </div>
 
     <div class="center">
-        <h1 style="font-size:4rem">
+        <h2 style="font-size:4rem">
             Podróże to nie wszystko!
-        </h1>
+        </h2>
     </div>
 
     <div class="center">
@@ -72,63 +72,39 @@
 
     <div class="center">
         <div class="content-container">
-            <h1>Kulinarny Świat Podróżnika</h1>
+            <h2>Kulinarny Świat Podróżnika</h2>
             <p>Podróżowanie to nie tylko zwiedzanie nowych miejsc i podziwianie krajobrazów, ale także odkrywanie smaków. Każdy kraj, który odwiedzam, kryje w sobie unikalną kuchnię, pełną tradycyjnych potraw i aromatów, które odzwierciedlają kulturę i historię danego miejsca. Jedzenie jest dla mnie równie ważnym elementem podróży, jak przygoda w górach czy zjazdy na nartach.</p>
         </div>
 
         <section class="spis-tresci center">
-            <ol>
-                <li>
-                    <a href="#Lnk">Krótki opis kultury jedzenia w różnych krajach</a>
-                </li>
-                <li>
-                    <a href="#Lnk">Moje ulubione smaki i potrawy</a>
-
-                </li>
-                <li>
-                    <a href="#Tatry">Tatry</a>
-                    <ol>
-                        <li>
-                            <a href="#oscypek">Oscypek</a>
-                        </li>
-                        <li>
-                            <a href="#placki-po-zbojnicku">Placki po zbojnicku</a>
-                        </li>
-                        <li>
-                            <a href="#kwasnica">Kwaśnica</a>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="#Austria">Alpy </a>
-                    <ol>
-                        <li>
-                            <a href="#fondue">Fondue</a>
-                        </li>
-                        <li>
-                            <a href="#raclette">Raclette</a>
-                        </li>
-                        <li>
-                            <a href="#wienr-schnitzel">Wiener Schnitzel</a>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="#Wlochy">Włochy</a>
-                        <ol>
-                            <li>
-                                <a href="#spaghetti-carbonara">Spaghetti Carbonara</a>
-                            </li>
-                            <li>
-                                <a href="#pizza-neapolitanska">Pizza Neapolitańska</a>
-                            </li>
-                        </ol>
-                </li>
-                <li>
-                    <a href="#opinion-section">Twoje Doświadczenia z Kuchnią EuropejskąTwoje Doświadczenia z Kuchnią Europejską</a>
-                </li>
-            </ol>
-
+            <h2>Spis treści</h2>
+            <nav>
+                <menu>
+                    <li><a href="#Lnk" class="menu-link">Krótki opis kultury jedzenia</a></li>
+                    <li><a href="#Lnk" class="menu-link">Moje ulubione smaki</a></li>
+                    <li><a href="#Tatry" class="menu-link">Tatry</a>
+                        <ul>
+                            <li><a href="#oscypek" class="menu-link">Oscypek</a></li>
+                            <li><a href="#placki-po-zbojnicku" class="menu-link">Placki po zbójnicku</a></li>
+                            <li><a href="#kwasnica" class="menu-link">Kwaśnica</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Austria" class="menu-link">Alpy</a>
+                        <ul>
+                            <li><a href="#fondue" class="menu-link">Fondue</a></li>
+                            <li><a href="#raclette" class="menu-link">Raclette</a></li>
+                            <li><a href="#wienr-schnitzel" class="menu-link">Wiener Schnitzel</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Wlochy" class="menu-link">Włochy</a>
+                        <ul>
+                            <li><a href="#spaghetti-carbonara" class="menu-link">Spaghetti Carbonara</a></li>
+                            <li><a href="#pizza-neapolitanska" class="menu-link">Pizza Neapolitańska</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#opinion-section" class="menu-link">Twoje Doświadczenia z Kuchnią Europejską</a></li>
+                </menu>
+            </nav>
         </section>
         <section id="przepisy" class="center">
             <div class="center">
@@ -147,13 +123,13 @@
                             </div>
                         </div>
                         <div>
-                            <h1>Składniki</h1>
+                            <h2>Składniki</h2>
                             <ul>
                                 <li>Coffee</li>
                                 <li>Tea</li>
                                 <li>Milk</li>
                             </ul>
-                            <h1>Sposób przygotowania</h1>
+                            <h2>Sposób przygotowania</h2>
                             <ol>
                                 <li><b>Rozgrzej grill</b> – oscypek najlepiej grillować na grillu węglowym lub elektrycznym, ale można także użyć patelni grillowej.</li>
                                 <li><b>Grillowanie</b> – posmaruj oscypki delikatnie oliwą z oliwek (opcjonalnie) i grilluj z obu stron przez około 2-3 minuty, aż ser delikatnie się roztopi i zyska złoty kolor.</li>
@@ -173,7 +149,7 @@
                             </div>
                         </div>
                         <div>
-                            <h1>Składniki</h1>
+                            <h2>Składniki</h2>
                             <ul>
                                 <li>500 g ziemniaków</li>
                                 <li>1 cebula</li>
@@ -183,7 +159,7 @@
                                 <li>Sól, pieprz, czosnek</li>
                                 <li>Olej do smażenia</li>
                             </ul>
-                            <h1>Sposób przygotowania</h1>
+                            <h2>Sposób przygotowania</h2>
                             <ol>
                                 <li><b>Przygotowanie ziemniaków</b> – obierz ziemniaki i zetrzyj je na tarce o grubych oczkach. Odsącz nadmiar wody.</li>
                                 <li><b>Dodanie składników</b> – do ziemniaków dodaj mąkę, jajka, sól i pieprz. Dokładnie wymieszaj.</li>
@@ -204,7 +180,7 @@
                             </div>
                         </div>
                         <div>
-                            <h1>Składniki</h1>
+                            <h2>Składniki</h2>
                             <ul>
                                 <li>1 kg kapusty kiszonej</li>
                                 <li>500 g wędzonych żeberek</li>
@@ -217,7 +193,7 @@
                                 <li>3 ziarna ziela angielskiego</li>
                                 <li>Sól i pieprz do smaku</li>
                             </ul>
-                            <h1>Sposób przygotowania</h1>
+                            <h2>Sposób przygotowania</h2>
                             <ol>
                                 <li><b>Gotowanie mięsa</b> – w dużym garnku zagotuj wodę, dodaj wędzone żeberka, boczek, liście laurowe i ziele angielskie. Gotuj na wolnym ogniu przez około godzinę, aż mięso będzie miękkie.</li>
                                 <li><b>Dodanie kapusty</b> – po godzinie dodaj do garnka kiszoną kapustę (jeśli jest bardzo kwaśna, można ją wcześniej przepłukać). Gotuj wszystko razem przez kolejne 30 minut.</li>
@@ -344,7 +320,7 @@
                             </div>
                         </div>
                         <div>
-                            <h1>Składniki</h1>
+                            <h2>Składniki</h2>
                             <ul>
                                 <li>400 g makaronu spaghetti</li>
                                 <li>150 g guanciale (lub pancetta)</li>
@@ -353,7 +329,7 @@
                                 <li>50 g sera Parmigiano Reggiano</li>
                                 <li>Sól i świeżo mielony czarny pieprz</li>
                             </ul>
-                            <h1>Sposób przygotowania</h1>
+                            <h2>Sposób przygotowania</h2>
                             <ol>
                                 <li><b>Gotowanie makaronu</b> – ugotuj spaghetti al dente w osolonej wodzie zgodnie z instrukcjami na opakowaniu.</li>
                                 <li><b>Smażenie guanciale</b> – pokrój guanciale na małe kawałki i podsmaż na patelni, aż będzie chrupiący. Odstaw z ognia.</li>
@@ -374,7 +350,7 @@
                             </div>
                         </div>
                         <div>
-                            <h1>Składniki</h1>
+                            <h2>Składniki</h2>
                             <ul>
                                 <li>500 g mąki typu „00”</li>
                                 <li>325 ml wody</li>
@@ -385,7 +361,7 @@
                                 <li>Świeża bazylia</li>
                                 <li>Oliwa z oliwek</li>
                             </ul>
-                            <h1>Sposób przygotowania</h1>
+                            <h2>Sposób przygotowania</h2>
                             <ol>
                                 <li><b>Przygotowanie ciasta</b> – w misce rozpuść drożdże w wodzie, a następnie dodaj mąkę i sól. Zagnieć ciasto, aż będzie gładkie. Przykryj i odstaw na 8-24 godziny do wyrastania.</li>
                                 <li><b>Formowanie pizzy</b> – podziel ciasto na porcje, rozciągnij na kształt okrągłego placka, zostawiając wyraźnie grubsze brzegi.</li>
@@ -414,20 +390,20 @@
 
 <section id="opinion-section">
     <div class="center">
-        <div class="content-container">
+        <div id="form-container" class="content-container">
             <h1>Podziel sie z nami twoją opinią na temat wybranego przez ciebie przepisu!</h1>
-            <form action="/submit-opinion" method="POST">
+            <form id="form-opinion" target="_blank" action="/submit-opinion" method="POST">
 
                 <!-- Pole tekstowe na imię -->
                 <label for="name">Imię:</label><br>
                 <input type="text" id="name" name="name" placeholder="Wpisz swoje imię"><br><br>
 
                 <!-- Pole e-mail -->
-                <label for="email">Adres e-mail:</label><br>
+                <label for="email">*Adres e-mail:</label><br>
                 <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required><br><br>
 
                 <!-- Pole lista rozwijana -->
-                <label for="recipe">Który przepis wypróbowałeś:</label><br>
+                <label for="recipe">*Który przepis wypróbowałeś:</label><br>
                 <select id="recipe" name="recipe" required>
                     <option value="">Wybierz przepis</option>
                     <option value="oscypek">Grillowany oscypek z żurawiną</option>
@@ -441,7 +417,7 @@
                 </select><br><br>
 
                 <!-- Radio button do oceny przepisu -->
-                <label>Jak oceniasz przepis:</label><br>
+                <label>*Jak oceniasz przepis:</label><br>
                 <input type="radio" id="rating1" name="rating" value="1" required>
                 <label for="rating1">1</label>
                 <input type="radio" id="rating2" name="rating" value="2">
@@ -454,7 +430,7 @@
                 <label for="rating5">5</label><br><br>
 
                 <!-- Pole obszaru tekstowego na opinię -->
-                <label for="opinion">Twoja opinia:</label><br>
+                <label for="opinion">*Twoja opinia:</label><br>
                 <textarea id="opinion" name="opinion" rows="4" cols="50" placeholder="Podziel się swoimi wrażeniami" required></textarea><br><br>
 
                 <!-- Checkbox na zdjęcie -->
@@ -466,7 +442,7 @@
                 <input type="date" id="date" name="date"><br><br>
 
                 <!-- Przycisk wysyłania formularza -->
-                <button type="submit">Wyślij opinię</button>
+                <button id="submit" type="submit">Wyślij opinię</button>
 
                 <!-- Przycisk do czyszczenia formularza -->
                 <button type="reset">Wyczyść formularz</button>

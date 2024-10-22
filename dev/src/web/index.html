@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" href="img/icons/travel.png" type="image/x-icon">
     <script src="build/script.js"></script>
+    <script src="build/weather.js"></script>
 </head>
 <body >
 <header >
@@ -18,15 +19,20 @@
         <div class="btn">
             <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
         </div>
-        <div class="menu_items">
-            <div class="dark-light-btn">
-                <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">
+        <nav class="navbar">
+            <div class="btn">
+                <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
             </div>
-            <a href="/" class="active">Strona główna</a>
-            <a href="/food.html">Jedzenie</a>
-            <a href="/gallery.html">Galeria</a>
-            <a href="#">About</a>
-        </div>
+            <div class="menu_items">
+                <div class="dark-light-btn">
+                    <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">
+                </div>
+                <a href="/" class="active">Strona główna</a>
+                <a href="/food.html">Jedzenie</a>
+                <a href="/gallery.html">Galeria</a>
+                <a href="#">About</a>
+            </div>
+        </nav>
     </nav>
     <div class="btn slide-in-left">
         <img  style="width:100%;" class="menu-btn" alt="Menu" src="img/icons/bars-solid.svg">
@@ -58,13 +64,22 @@
         <div class="grid-container">
             <div>
                 <div class="img-wrapper">
-                    <img alt="Picture" src="img/traveler.jpg">
+                    <svg></svg>
                 </div>
             </div>
             <div>
                 <h1>Podróże – Okno na Świat</h1>
                 <p><span class="first-letter">P</span>odróżowanie to moja największa pasja, która pozwala mi odkrywać nowe kultury, podziwiać zapierające dech w piersiach krajobrazy i poznawać ludzi z różnych zakątków świata. Każda wyprawa to okazja do nauki, refleksji i rozwijania horyzontów. W tej części opowiem o moich ulubionych miejscach w Europie, które odwiedziłem w ostatnich latach, oraz o tym, jak podróże wpłynęły na moje życie.</p>
             </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="center">
+    <div class="content-container">
+        <div class="center" id="weather-info">
         </div>
     </div>
 </div>

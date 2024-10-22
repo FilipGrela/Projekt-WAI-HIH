@@ -2,12 +2,14 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        gallery: './src/web/scripts/gallery.ts', // Entry for the gallery script
-        // anotherPage: './src/web/scripts/anotherPage.ts' // Another entry point for a different script
+        gallery: './src/web/scripts/gallery.ts',
+        script: './src/web/scripts/script.ts',
+        weather: './src/web/scripts/weather.ts',
     },
     output: {
-        filename: 'gallery.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'src/web/build'),
+        chunkFilename: '[id].[chunkhash].js'
     },
     module: {
         rules: [

@@ -49,6 +49,7 @@ h2 {
     font-size: 4rem;
     width: 80%;
 }
+
 hr {
     display: block;
     margin: 3em auto;
@@ -130,6 +131,16 @@ hr {
     align-items:center;
 }
 .img-wrapper img{
+    flex-shrink:0;
+    max-width:90%;
+    max-height:100%;
+    border-radius: 1rem;
+
+    box-shadow: inset 0px 0px 100px -0px var(--color-primary);
+
+}
+
+.img-wrapper svg{
     flex-shrink:0;
     max-width:90%;
     max-height:100%;
@@ -227,8 +238,7 @@ header .navbar a {
     padding: 1rem 1.5rem;
     border-radius: 2rem;
 }
-header .navbar a:hover,
-.active{
+header .navbar .active, a:hover{
     background: var(--color-secondary);
     color: var(--color-accent-1);
     transition-duration: 0.5s;

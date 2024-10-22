@@ -1,3 +1,10 @@
+.form-sent-nortification{
+    text-align: center;
+    background-color: #3d072e;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 .recipe-content h1{
     font-size: 1.5rem;
 }
