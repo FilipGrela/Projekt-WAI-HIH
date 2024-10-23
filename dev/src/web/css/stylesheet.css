@@ -13,6 +13,8 @@
     --color-line: #3a3b47;
 }
 
+
+
 .weather-info{
     display: flex;
     flex-wrap: wrap;
@@ -42,8 +44,12 @@ section{
     width: 100%;
 }
 
+h1{
+    font-size: 4rem;
+}
+
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .page-title{
