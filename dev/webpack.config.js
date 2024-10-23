@@ -27,4 +27,13 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js'],
     },
+    devtool: 'source-map',  // Enable source maps
+    watch: true,
+    watchOptions: {
+        poll: 500, // Sprawdzaj zmiany co 1000 ms
+        ignored: /node_modules/, // Ignoruj zmiany w node_modules
+    },
+    cache: {
+        type: 'filesystem',  // Użyj systemu plików jako cache
+    },
 };

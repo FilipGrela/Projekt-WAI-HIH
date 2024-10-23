@@ -13,6 +13,13 @@
     --color-line: #3a3b47;
 }
 
+.weather-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.2rem;
+}
+
 a:link {
     color: #2350a5;
     background-color: transparent;

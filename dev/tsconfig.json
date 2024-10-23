@@ -5,6 +5,7 @@
     "moduleResolution": "Node",
     "sourceMap": true,
     "outDir": "src/web/build",
+    "strict": true,
     "lib": [
       "es2015",
       "dom"
