@@ -1,3 +1,15 @@
 .pswp-gallery img {
     max-width: 20em;
 }
+
+.pswp-gallery{
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.pswp-gallery a{
+    margin: 1rem;
+}

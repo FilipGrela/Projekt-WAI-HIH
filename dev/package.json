@@ -8,9 +8,9 @@
     "build:prod": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Filip Grela",
   "license": "ISC",
-  "description": "",
+  "description": "Project for Web Aplication Development",
   "dependencies": {
     "jquery": "^3.7.1",
     "photoswipe": "^5.4.4"

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<website xmlns:xlink="http://www.w3.org/1999/xlink"
-          xmlns:xs="\xml\schema.xsd">
+<website xmlns:xs="\xml\schema.xsd">
+    <xs:autor>Filip Grela</xs:autor>
     <food>
-
         <xs:page-title>
-            <title>Pasje, które otwierają świat!</title>
+            <title xs:bold="true">Pasje, które otwierają świat!</title>
             <summary>O podróżach, górach i narciarstwie – moim oknem na Europę.</summary>
         </xs:page-title>
+        <xs:zdjecie xs:src="" xs:text="" xs:typ=""/>
         <xs:potrawy xs:liczbaPotraw="3">
-            <potrawa xs:nazwa="Grillowany oscypek z żurawiną" xs:typ="Ser">
-                <skladnik xs:ilosc="1" xs:jednostka="szt">Oscypek</skladnik>
+            <potrawa xs:data-dodania="2024-10-28" xs:trudnosc-przygotowania="proste" xs:nazwa="Grillowany oscypek z żurawiną" xs:typ="Ser">
+                <skladnik xs:ilosc="1" xs:jednostka="szt.">Oscypek</skladnik>
                 <skladnik xs:ilosc="1" xs:jednostka="łyżeczka">Oliwa z oliwek</skladnik>
                 <skladnik xs:ilosc="1" xs:jednostka="łyżeczka">Żurawina</skladnik>
                 <skladnik xs:ilosc="1" xs:jednostka="szczypta">Tymianek</skladnik>
 
-                <xs:zdjecie xs:src="/img/food/oscypek.webp" xs:typ="image/webp" xs:alt="Oscypek"/>
+                <xs:zdjecie xs:src="/img/food/oscypek.webp" xs:typ="image/webp" xs:text="Oscypek"/>
 
                 <krok>Rozgrzej grill – oscypek najlepiej grillować na grillu węglowym lub elektrycznym, ale można także użyć patelni grillowej.</krok>
                 <krok>Grillowanie – posmaruj oscypki delikatnie oliwą z oliwek (opcjonalnie) i grilluj z obu stron przez około 2-3 minuty, aż ser delikatnie się roztopi i zyska złoty kolor.</krok>
@@ -25,17 +24,17 @@
                 <opis>To szybkie i smakowite danie idealnie nadaje się jako przystawka lub lekka przekąska, zwłaszcza podczas zimowych dni w górach.</opis>
             </potrawa>
 
-            <potrawa xs:nazwa="Placki po zbójnicku" xs:typ="Danie główne">
+            <potrawa xs:trudnosc-przygotowania="1" xs:nazwa="Placki po zbójnicku" xs:typ="Danie główne">
 
                 <skladnik xs:ilosc="500" xs:jednostka="g">Ziemniaki</skladnik>
-                <skladnik xs:ilosc="1" xs:jednostka="szt">Cebula</skladnik>
-                <skladnik xs:ilosc="2" xs:jednostka="szt">Jajka</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szt.">Cebula</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="szt.">Jajka</skladnik>
                 <skladnik xs:ilosc="100" xs:jednostka="g">Mąka</skladnik>
                 <skladnik xs:ilosc="200" xs:jednostka="g">Wołowina</skladnik>
                 <skladnik xs:ilosc="1" xs:jednostka="szczypta">Sól, pieprz, czosnek</skladnik>
                 <skladnik xs:ilosc="5" xs:jednostka="ml">Olej do smażenia</skladnik>
 
-                <xs:zdjecie xs:src="/img/food/placki-po-zbojnicku.webp" xs:typ="image/webp" xs:alt="Placki po zbójnicku"/>
+                <xs:zdjecie xs:src="/img/food/placki-po-zbojnicku.webp" xs:typ="image/webp" xs:text="Placki po zbójnicku"/>
 
                 <krok>Przygotowanie ziemniaków – obierz ziemniaki i zetrzyj je na tarce o grubych oczkach. Odsącz nadmiar wody.</krok>
                 <krok>Dodanie składników – do ziemniaków dodaj mąkę, jajka, sól i pieprz. Dokładnie wymieszaj.</krok>
@@ -46,19 +45,19 @@
                 <opis>Placki po zbójnicku to klasyczne danie kuchni góralskiej, doskonałe na sycący obiad.</opis>
             </potrawa>
 
-            <potrawa xs:nazwa="Kwaśnica" xs:typ="Zupa">
-                <skladnik xs:ilosc="1" xs:jednostka="g">Kapusta kiszona</skladnik>
+            <potrawa xs:trudnosc-przygotowania="trudne" xs:nazwa="Kwaśnica" xs:typ="Zupa">
+                <skladnik xs:ilosc="1" xs:jednostka="kg">Kapusta kiszona</skladnik>
                 <skladnik xs:ilosc="500" xs:jednostka="g">Wędzone żeberka</skladnik>
                 <skladnik xs:ilosc="300" xs:jednostka="g">Surowy boczek</skladnik>
                 <skladnik xs:ilosc="2" xs:jednostka="l">Woda</skladnik>
-                <skladnik xs:ilosc="3" xs:jednostka="szt">Ziemniaki</skladnik>
-                <skladnik xs:ilosc="2" xs:jednostka="szt">Marchewki</skladnik>
-                <skladnik xs:ilosc="1" xs:jednostka="szt">Cebula</skladnik>
-                <skladnik xs:ilosc="2" xs:jednostka="szt">Liście laurowe</skladnik>
-                <skladnik xs:ilosc="3" xs:jednostka="szt">Ziarna ziela angielskiego</skladnik>
+                <skladnik xs:ilosc="3" xs:jednostka="szt.">Ziemniaki</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="szt.">Marchewki</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szt.">Cebula</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="szt.">Liście laurowe</skladnik>
+                <skladnik xs:ilosc="3" xs:jednostka="szt.">Ziarna ziela angielskiego</skladnik>
                 <skladnik xs:ilosc="1" xs:jednostka="szczypta">Sól i pieprz</skladnik>
 
-                <xs:zdjecie xs:src="/img/food/kwasnica.webp" xs:typ="image/webp" xs:alt="Kwaśnica"/>
+                <xs:zdjecie xs:src="/img/food/kwasnica.webp" xs:typ="image/webp" xs:text="Kwaśnica"/>
 
                 <krok>Gotowanie mięsa – w dużym garnku zagotuj wodę, dodaj wędzone żeberka, boczek, liście laurowe i ziele angielskie. Gotuj na wolnym ogniu przez około godzinę, aż mięso będzie miękkie.</krok>
                 <krok>Dodanie kapusty – po godzinie dodaj do garnka kiszoną kapustę (jeśli jest bardzo kwaśna, można ją wcześniej przepłukać). Gotuj wszystko razem przez kolejne 30 minut.</krok>
@@ -81,12 +80,13 @@
             Tatry Alpy Włochy
         </xs:spis-tresci>
 
+
         <xs:tabele>
-            <row>
+            <head>
                 <line>Kierunek</line>
                 <line>Popularne Potrawy</line>
                 <line>Lokalizacja</line>
-            </row>
+            </head>
             <row>
                 <line>Gruzja</line>
                 <line>Chinkali, Chaczapuri</line>

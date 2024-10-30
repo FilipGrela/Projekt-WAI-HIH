@@ -5,6 +5,9 @@ import 'photoswipe/style.css';
 const lightbox = new PhotoSwipeLightbox({
     gallery: '#my-gallery',
     children: 'a',
-    pswpModule: PhotoSwipe
+    pswpModule: PhotoSwipe,
+    spacing: 0.2,
+    wheelToZoom: true,
+    preloaderDelay: 500
 });
 lightbox.init();

@@ -5,16 +5,27 @@
         xmlns:ex="\xml\schema.xsd"
         attributeFormDefault="qualified">
 
+
     <xs:element name="page-title">
+<!--        Lokalny typ złożony-->
         <xs:complexType>
             <xs:all>
-                <xs:element name='title' type="xs:string"/>
+                <xs:element name="title">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="bold" type="xs:boolean" use="optional"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="summary" type="xs:string"/>
             </xs:all>
         </xs:complexType>
     </xs:element>
 
     <xs:element name="potrawy">
+<!--        Lokalny typ złożony-->
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="potrawa" type="ex:potrawa" minOccurs="1" maxOccurs="unbounded"/>
@@ -23,29 +34,56 @@
         </xs:complexType>
     </xs:element>
 
+<!--        Globalny typ złożony-->
     <xs:complexType name="potrawa">
         <xs:group ref="ex:przepis-group" minOccurs="1" maxOccurs="unbounded"/>
         <xs:attribute name="nazwa" type="xs:string"/>
         <xs:attribute name="typ" type="xs:string"/>
+        <xs:attribute name="trudnosc-przygotowania" type="ex:trudnosc-union" use="required"/>
+        <xs:attribute name="data-dodania" type="xs:date" use="optional"/>
     </xs:complexType>
 
+    <xs:attribute name="ilosc">
+<!--        Lokalny typ prosty-->
+        <xs:simpleType>
+            <xs:restriction base="xs:unsignedInt">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="1000"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+<xs:attribute name="jednostka">
+    <!--        Lokalny typ prosty-->
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="15"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+
+<!--        Globalny typ złożony-->
     <xs:complexType name="skladnik" >
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="ilosc" type="xs:string" use="required"/>
-                <xs:attribute name="jednostka" type="xs:string" use="required"/>
+                <xs:attribute ref="ex:ilosc" use="required"/>
+                <xs:attribute ref="ex:jednostka" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
 
     <xs:element name="zdjecie">
+<!--        Lokalny typ złożony-->
         <xs:complexType>
-            <xs:attribute name="src" type="xs:string" use="required"/>
+            <xs:attribute name="src" type="xs:anyURI" use="required"/>
             <xs:attribute name="typ" type="xs:string" use="required"/>
-            <xs:attribute name="alt" type="xs:string" use="required"/>
+            <xs:attribute ref="ex:text" use="required"/>
         </xs:complexType>
     </xs:element>
 
+<!--        Globalny typ prosty-->
     <xs:simpleType name="krok">
         <xs:restriction base="xs:string">
             <xs:minLength value="20"/>
@@ -53,6 +91,7 @@
     </xs:simpleType>
 
     <xs:element name="wiecej-link">
+<!--        Lokalny typ złożony-->
         <xs:complexType>
             <xs:all>
                 <xs:element name="tytul" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -61,21 +100,24 @@
         </xs:complexType>
     </xs:element>
 
+<!--    Globalny typ złożony-->
     <xs:complexType name="content">
         <xs:sequence>
             <xs:element name="przepisy-link" type="ex:przepisy-link"/>
         </xs:sequence>
-        <xs:attribute name="text" type="xs:string" use="required"/>
+        <xs:attribute ref="ex:text" use="required"/>
     </xs:complexType>
 
+<!--    Globalny typ złożony-->
     <xs:complexType name="przepisy-link">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="href" type="xs:string" use="required"/>
+                <xs:attribute name="href" type="xs:anyURI" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
 
+<!--    Globalny typ złożony-->
     <xs:group name="przepis-group">
         <xs:sequence>
             <xs:element name="skladnik" type="ex:skladnik" minOccurs="1" maxOccurs="unbounded"/>
@@ -87,26 +129,79 @@
 
     <xs:element name="spis-tresci" type="ex:lista-string"/>
 
+<!--    Globalny typ prosty-->
+    <xs:simpleType name="short-string">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<!--    Globalny typ prosty-->
     <xs:simpleType name="lista-string">
         <xs:restriction>
+<!--            Lokalny typ prosty-->
             <xs:simpleType>
-                <xs:list itemType="xs:string"/>
+                <xs:list itemType="short-string"/>
             </xs:simpleType>
             <xs:length value="3"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:element name="tabele">
+<!--    Loaklny typ złożony-->
         <xs:complexType >
-            <xs:choice>
-                <xs:element name="row" minOccurs="1" maxOccurs="unbounded" type="ex:line"/>
-            </xs:choice>
+            <xs:sequence>
+                <xs:element name="head" minOccurs="1" maxOccurs="1" type="ex:lineType"/>
+                <xs:element name="row" minOccurs="1" maxOccurs="unbounded" type="ex:lineType"/>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="line">
+    <xs:attribute name="text" type="xs:string"/>
+
+    <!--    Globalny typ złożony-->
+    <xs:complexType name="lineType">
         <xs:choice>
             <xs:element name="line" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
         </xs:choice>
     </xs:complexType>
+
+    <!--    Globalny typ prosty-->
+    <xs:simpleType name="trudnosc-przygotowania-text">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="proste"/>
+            <xs:enumeration value="średne"/>
+            <xs:enumeration value="trudne"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<!--    Globalny typ prosty-->
+    <xs:simpleType name="trudnosc-przygotowania-liczba">
+        <xs:restriction base="xs:float">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="1.5"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="2.5"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="3.5"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="4.5"/>
+            <xs:enumeration value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<!--    Globalny typ prosty-->
+    <xs:simpleType name="trudnosc-union">
+        <xs:union memberTypes="trudnosc-przygotowania-text trudnosc-przygotowania-liczba"/>
+    </xs:simpleType>
+
+
+    <xs:element name="autor">
+<!--        Lokalny typ prosty-->
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="([A-Z][a-z]+) ([A-Z][a-z]+)"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
 </xs:schema>
