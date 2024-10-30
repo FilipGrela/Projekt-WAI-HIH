@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<website xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xs="\xml\schema.xsd">
+    <food>
+
+        <xs:page-title>
+            <title>Pasje, które otwierają świat!</title>
+            <summary>O podróżach, górach i narciarstwie – moim oknem na Europę.</summary>
+        </xs:page-title>
+        <xs:potrawy xs:liczbaPotraw="3">
+            <potrawa xs:nazwa="Grillowany oscypek z żurawiną" xs:typ="Ser">
+                <skladnik xs:ilosc="1" xs:jednostka="szt">Oscypek</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="łyżeczka">Oliwa z oliwek</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="łyżeczka">Żurawina</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szczypta">Tymianek</skladnik>
+
+                <xs:zdjecie xs:src="/img/food/oscypek.webp" xs:typ="image/webp" xs:alt="Oscypek"/>
+
+                <krok>Rozgrzej grill – oscypek najlepiej grillować na grillu węglowym lub elektrycznym, ale można także użyć patelni grillowej.</krok>
+                <krok>Grillowanie – posmaruj oscypki delikatnie oliwą z oliwek (opcjonalnie) i grilluj z obu stron przez około 2-3 minuty, aż ser delikatnie się roztopi i zyska złoty kolor.</krok>
+                <krok>Podawanie – wyjmij oscypki z grilla i podaj na talerzu, a następnie dodaj na wierzch łyżkę żurawiny.</krok>
+                <krok>Dekoracja – dla urozmaicenia smaku można dodać świeże zioła, takie jak tymianek, które podkreślą smak sera.</krok>
+
+                <opis>To szybkie i smakowite danie idealnie nadaje się jako przystawka lub lekka przekąska, zwłaszcza podczas zimowych dni w górach.</opis>
+            </potrawa>
+
+            <potrawa xs:nazwa="Placki po zbójnicku" xs:typ="Danie główne">
+
+                <skladnik xs:ilosc="500" xs:jednostka="g">Ziemniaki</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szt">Cebula</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="szt">Jajka</skladnik>
+                <skladnik xs:ilosc="100" xs:jednostka="g">Mąka</skladnik>
+                <skladnik xs:ilosc="200" xs:jednostka="g">Wołowina</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szczypta">Sól, pieprz, czosnek</skladnik>
+                <skladnik xs:ilosc="5" xs:jednostka="ml">Olej do smażenia</skladnik>
+
+                <xs:zdjecie xs:src="/img/food/placki-po-zbojnicku.webp" xs:typ="image/webp" xs:alt="Placki po zbójnicku"/>
+
+                <krok>Przygotowanie ziemniaków – obierz ziemniaki i zetrzyj je na tarce o grubych oczkach. Odsącz nadmiar wody.</krok>
+                <krok>Dodanie składników – do ziemniaków dodaj mąkę, jajka, sól i pieprz. Dokładnie wymieszaj.</krok>
+                <krok>Smażenie – na rozgrzanym oleju smaż placki z obu stron, aż będą złociste.</krok>
+                <krok>Sos zbójnicki – wołowinę podsmaż z cebulą i czosnkiem, dopraw solą, pieprzem i papryką.</krok>
+                <krok>Podawanie – placki podawaj z mięsem i sosem. Możesz udekorować natką pietruszki.</krok>
+
+                <opis>Placki po zbójnicku to klasyczne danie kuchni góralskiej, doskonałe na sycący obiad.</opis>
+            </potrawa>
+
+            <potrawa xs:nazwa="Kwaśnica" xs:typ="Zupa">
+                <skladnik xs:ilosc="1" xs:jednostka="g">Kapusta kiszona</skladnik>
+                <skladnik xs:ilosc="500" xs:jednostka="g">Wędzone żeberka</skladnik>
+                <skladnik xs:ilosc="300" xs:jednostka="g">Surowy boczek</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="l">Woda</skladnik>
+                <skladnik xs:ilosc="3" xs:jednostka="szt">Ziemniaki</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="szt">Marchewki</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szt">Cebula</skladnik>
+                <skladnik xs:ilosc="2" xs:jednostka="szt">Liście laurowe</skladnik>
+                <skladnik xs:ilosc="3" xs:jednostka="szt">Ziarna ziela angielskiego</skladnik>
+                <skladnik xs:ilosc="1" xs:jednostka="szczypta">Sól i pieprz</skladnik>
+
+                <xs:zdjecie xs:src="/img/food/kwasnica.webp" xs:typ="image/webp" xs:alt="Kwaśnica"/>
+
+                <krok>Gotowanie mięsa – w dużym garnku zagotuj wodę, dodaj wędzone żeberka, boczek, liście laurowe i ziele angielskie. Gotuj na wolnym ogniu przez około godzinę, aż mięso będzie miękkie.</krok>
+                <krok>Dodanie kapusty – po godzinie dodaj do garnka kiszoną kapustę (jeśli jest bardzo kwaśna, można ją wcześniej przepłukać). Gotuj wszystko razem przez kolejne 30 minut.</krok>
+                <krok>Warzywa – obierz i pokrój ziemniaki oraz marchewki na kawałki. Cebulę drobno posiekaj. Dodaj do zupy i gotuj, aż ziemniaki będą miękkie.</krok>
+                <krok>Przyprawienie – dopraw kwaśnicę solą i pieprzem wedle uznania.</krok>
+                <krok>Podawanie – podawaj gorącą kwaśnicę z kawałkami mięsa i ziemniakami. Można dodać także chleb razowy jako dodatek.</krok>
+
+                <opis>Kwaśnica to tradycyjna góralska zupa na bazie kiszonej kapusty i wędzonego mięsa, idealna na zimowe dni.</opis>
+            </potrawa>
+        </xs:potrawy>
+        <xs:wiecej-link>
+            <tytul>Chcesz więcej przepisów?</tytul>
+            <content xs:text="Znajdzesz je klikajc ">
+                <przepisy-link xs:href="https://www.przepisy.pl/">TUTAJ</przepisy-link>
+            </content>
+        </xs:wiecej-link>
+
+
+        <xs:spis-tresci>
+            Tatry Alpy Włochy
+        </xs:spis-tresci>
+
+        <xs:tabele>
+            <row>
+                <line>Kierunek</line>
+                <line>Popularne Potrawy</line>
+                <line>Lokalizacja</line>
+            </row>
+            <row>
+                <line>Gruzja</line>
+                <line>Chinkali, Chaczapuri</line>
+                <line>Kaukaz, Wschodnia Europa</line>
+            </row>
+            <row>
+                <line>Portugalia</line>
+                <line>Bacalhau, Pastel de Nata</line>
+                <line>Południowa Europa</line>
+            </row>
+            <row>
+                <line>Maroko</line>
+                <line>Kuskus, Tajine</line>
+                <line>Północna Afryka</line>
+            </row>
+            <row>
+                <line>Japonia</line>
+                <line>Sushi, Ramen</line>
+                <line>Azja Wschodnia</line>
+            </row>
+            <row>
+                <line>Meksyk</line>
+                <line>Tacos, Guacamole</line>
+                <line>Ameryka Północna</line>
+            </row>
+        </xs:tabele>
+    </food>
+</website>

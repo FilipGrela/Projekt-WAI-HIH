@@ -13,8 +13,6 @@
     --color-line: #3a3b47;
 }
 
-
-
 .weather-info{
     display: flex;
     flex-wrap: wrap;

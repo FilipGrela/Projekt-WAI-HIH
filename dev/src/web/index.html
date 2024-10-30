@@ -19,20 +19,15 @@
         <div class="btn">
             <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
         </div>
-        <nav class="navbar">
-            <div class="btn">
-                <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
-            </div>
-            <div class="menu_items">
-                <div class="dark-light-btn">
-                    <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">
-                </div>
-                <a href="/" class="active">Strona główna</a>
-                <a href="/food.html">Jedzenie</a>
-                <a href="/gallery.html">Galeria</a>
-                <a href="#">About</a>
-            </div>
-        </nav>
+        <div class="menu_items">
+<!--            <div class="dark-light-btn">-->
+<!--                <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">-->
+<!--            </div>-->
+            <a href="/">Strona główna</a>
+            <a href="/food.html">Jedzenie</a>
+            <a class="active" href="/gallery.html">Galeria</a>
+            <a href="#">About</a>
+        </div>
     </nav>
     <div class="btn slide-in-left">
         <img  style="width:100%;" class="menu-btn" alt="Menu" src="img/icons/bars-solid.svg">
@@ -41,8 +36,13 @@
 
 <noscript>
     <link rel="stylesheet" href="css/noscript.css">
+
     <div class="blur center">
+        <input type="checkbox" id="close-noscript-message">
         <div class="noscript-content content-container">
+
+            <label for="close-noscript-message" class="close-button">×</label>
+
             <H1>Twoja przeglądarka nie obsługuje Java Script!</H1>
             <p>Aby strona funkcjonowała poprawniei wymagana jest obsługa JavaScript. <a href="https://www.enable-javascript.com/" target="_blank">Tutaj</a> znajdziesz instrukcje jak włączyć JavaScript w swojej przeglądarce. </p>
 
@@ -166,7 +166,7 @@
         <div class="content-container border">
             <div class="grid-container">
                 <div>
-                    <h1>Tatry vs Alpy – Które Góry Wybieram?</h1>
+                    <h1>Tatry kontra Alpy – Które Góry Wybieram?</h1>
                     <p><span class="first-letter">T</span>atry i Alpy to dwie zupełnie różne krainy, które kocham równie mocno, ale z innych powodów. Tatry to dla mnie miejsce spokoju i refleksji, zaś Alpy symbolizują przygodę i wyzwanie. W tej części przedstawię porównanie obu tych miejsc, ich wyjątkowe cechy i to, dlaczego warto odwiedzać zarówno polskie i słowackie Tatry, jak i majestatyczne Alpy.</p>
                 </div>
                 <div class="img-wrapper">

@@ -23,9 +23,9 @@
             <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
         </div>
         <div class="menu_items">
-            <div class="dark-light-btn">
-                <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">
-            </div>
+<!--            <div class="dark-light-btn">-->
+<!--                <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">-->
+<!--            </div>-->
             <a href="/">Strona główna</a>
             <a class="active" href="/food.html">Jedzenie</a>
             <a href="/gallery.html">Galeria</a>
@@ -39,10 +39,15 @@
 
 <noscript>
     <link rel="stylesheet" href="css/noscript.css">
+
     <div class="blur center">
+        <input type="checkbox" id="close-noscript-message">
         <div class="noscript-content content-container">
-            <h1>Twoja przeglądarka nie obsługuje Java Script!</h1>
-            <p>Aby strona funkcjonowała poprawniei wymagana jest obsługa JavaScript. <a href="https://www.enable-javascript.com/">Tutaj</a> znajdziesz instrukcje jak włączyć JavaScript w swojej przeglądarce. </p>
+
+            <label for="close-noscript-message" class="close-button">×</label>
+
+            <H1>Twoja przeglądarka nie obsługuje Java Script!</H1>
+            <p>Aby strona funkcjonowała poprawniei wymagana jest obsługa JavaScript. <a href="https://www.enable-javascript.com/" target="_blank">Tutaj</a> znajdziesz instrukcje jak włączyć JavaScript w swojej przeglądarce. </p>
 
             <a class="click-me" href="https://www.enable-javascript.com/" target="_blank">Pomóż mi włączyć JavaScript</a>
         </div>
@@ -126,9 +131,10 @@
                         <div>
                             <h2>Składniki</h2>
                             <ul>
-                                <li>Coffee</li>
-                                <li>Tea</li>
-                                <li>Milk</li>
+                                <li>Oscypek</li>
+                                <li>Oliwa z oliwek</li>
+                                <li>Żurawina</li>
+                                <li>Tymianek</li>
                             </ul>
                             <h2>Sposób przygotowania</h2>
                             <ol>
@@ -392,7 +398,7 @@
 <section class="center">
     <div class="content-container center">
         <h2>Nowe Miejsca do Odkrycia Kulinarnego</h2>
-        <p>Podróże kulinarne to nie tylko zwiedzanie nowych miejsc, ale również odkrywanie smaków, które są sercem danej kultury. W różnych zakątkach świata, potrawy mają głęboko zakorzenione tradycje, odzwierciedlające historię, klimat i lokalne surowce. Przedstawiona poniżej tabelka prezentuje fascynujące kulinarne kierunki, które warto odwiedzić, aby spróbować wyjątkowych specjałów lokalnych kuchni. Od aromatycznych przypraw Maroka po wyrafinowaną prostotę sushi w Japonii — każdy z tych regionów oferuje kulinarną podróż, której warto doświadczyć. Poznaj najpopularniejsze potrawy z wybranych krajów i odkryj nowe miejsca na swojej kulinarnej mapie świata.</p>
+        <p>Podróże kulinarne to nie tylko zwiedzanie nowych miejsc, ale również odkrywanie smaków, które są sercem danej kultury. W różnych zakątkach świata potrawy mają głęboko zakorzenione tradycje, odzwierciedlające historię, klimat i lokalne surowce. Przedstawiona poniżej tabelka prezentuje fascynujące kulinarne kierunki, które warto odwiedzić, aby spróbować wyjątkowych specjałów lokalnych kuchni. Od aromatycznych przypraw Maroka po wyrafinowaną prostotę sushi w Japonii — każdy z tych regionów oferuje kulinarną podróż, której warto doświadczyć. Poznaj najpopularniejsze potrawy z wybranych krajów i odkryj nowe miejsca na swojej kulinarnej mapie świata.</p>
         <table>
             <thead>
             <tr>
@@ -435,7 +441,7 @@
 <section id="opinion-section">
     <div class="center">
         <div id="form-container" class="content-container">
-            <h2>Podziel sie z nami twoją opinią na temat wybranego przez ciebie przepisu!</h2>
+            <h2>Podziel się z nami twoją opinią na temat wybranego przez ciebie przepisu!</h2>
             <form id="form-opinion" target="_blank" action="/submit-opinion" method="POST">
 
                 <!-- Pole tekstowe na imię -->

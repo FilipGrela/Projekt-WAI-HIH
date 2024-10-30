@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="\xml\schema.xsd"
+        xmlns:ex="\xml\schema.xsd"
+        attributeFormDefault="qualified">
+
+    <xs:element name="page-title">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name='title' type="xs:string"/>
+                <xs:element name="summary" type="xs:string"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="potrawy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="potrawa" type="ex:potrawa" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="liczbaPotraw" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="potrawa">
+        <xs:group ref="ex:przepis-group" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:attribute name="nazwa" type="xs:string"/>
+        <xs:attribute name="typ" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="skladnik" >
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="ilosc" type="xs:string" use="required"/>
+                <xs:attribute name="jednostka" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="zdjecie">
+        <xs:complexType>
+            <xs:attribute name="src" type="xs:string" use="required"/>
+            <xs:attribute name="typ" type="xs:string" use="required"/>
+            <xs:attribute name="alt" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="krok">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="wiecej-link">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="tytul" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="content" type="ex:content" minOccurs="1" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="content">
+        <xs:sequence>
+            <xs:element name="przepisy-link" type="ex:przepisy-link"/>
+        </xs:sequence>
+        <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="przepisy-link">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="href" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:group name="przepis-group">
+        <xs:sequence>
+            <xs:element name="skladnik" type="ex:skladnik" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element ref="ex:zdjecie"  minOccurs="1" maxOccurs="1"/>
+            <xs:element name="krok" type="ex:krok"  minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="opis" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:element name="spis-tresci" type="ex:lista-string"/>
+
+    <xs:simpleType name="lista-string">
+        <xs:restriction>
+            <xs:simpleType>
+                <xs:list itemType="xs:string"/>
+            </xs:simpleType>
+            <xs:length value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="tabele">
+        <xs:complexType >
+            <xs:choice>
+                <xs:element name="row" minOccurs="1" maxOccurs="unbounded" type="ex:line"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="line">
+        <xs:choice>
+            <xs:element name="line" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>
