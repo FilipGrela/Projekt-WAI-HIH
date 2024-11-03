@@ -34,9 +34,14 @@ select{
     border: 1px solid var(--color-border);
 }
 
+form > button {
+    margin: 1rem;
+}
+
 button{
     color: var(--color-text);
     background-color: var(--color-triatriary);
     border: 1px solid var(--color-border);
-    margin: 1rem;
+
 }
+

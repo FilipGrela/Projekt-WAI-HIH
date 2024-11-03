@@ -1,6 +1,3 @@
-import {get} from "jquery";
-import * as stream from "node:stream";
-
 const API_KEY = '3d31e194e08946cf884200450242210';  // Wprowadź swój klucz API AccuWeather
 const City = 'Warszawa';  // Wprowadź klucz lokalizacji (np. Warszawa)
 
@@ -14,6 +11,7 @@ async function getWeatherConditions(locationKey: string, weatherInfoDiv:Element|
         }
 
         const weather = await response.json();
+
 
         console.log(<JSON>weather)
 

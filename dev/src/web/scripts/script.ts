@@ -1,4 +1,5 @@
-import * as $ from "jquery";
+import $ from "jquery";
+import "jquery-ui/ui/widgets/dialog.js";
 
 function load_menu_buttons(): void {
     let navbar:Element = <Element>document.querySelector('.navbar');
@@ -45,6 +46,9 @@ function addSendInformation(){
     const fragment = new DocumentFragment();
 
     const h1:HTMLHeadingElement = document.createElement("h1");
+    $("#dialog").dialog({
+        closeText: "×"
+    });
     h1.setAttribute("class", "form-sent-nortification");
     h1.textContent  = "Niedawno wysłano zgłoszenie!";
     fragment.append(h1);
