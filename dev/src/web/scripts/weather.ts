@@ -3,25 +3,23 @@ const City = 'Warszawa';  // Wprowadź klucz lokalizacji (np. Warszawa)
 
 async function getWeatherConditions(locationKey: string, weatherInfoDiv:Element|null) {
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${locationKey}&aqi=no`;
-
+    let weather;
     try {
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Błąd w pobieraniu danych');
         }
 
-        const weather = await response.json();
+        weather = await response.json();
 
-
-        console.log(<JSON>weather)
-
-        // displayWeatherInfo(weather);
         if (weatherInfoDiv) {
             weatherInfoDiv.append(getWeatherFragment(weather));
         }
     } catch (error) {
         console.error('Błąd:', error);
+        return null;
     }
+    return weather;
 }
 
 function getWeatherFragment(weather:any):DocumentFragment {
@@ -38,6 +36,9 @@ function getWeatherFragment(weather:any):DocumentFragment {
     const p_wind:HTMLParagraphElement = document.createElement("p");
     const p_humidity:HTMLParagraphElement = document.createElement("p");
 
+    const br:HTMLHRElement = document.createElement("hr");
+
+
     p_cityName.textContent = weather_city.name;
     p_temperature.textContent = 'Temperatura: ' + weather_current.temp_c + '°C';
     p_conditions.textContent = 'Warunki: ' +weather_current.condition.text;
@@ -46,7 +47,7 @@ function getWeatherFragment(weather:any):DocumentFragment {
     p_wind.textContent = 'Wiatr: '+weather_current.wind_kph+'km/h';
     p_humidity.textContent = 'Wilgotnosc: ' + weather_current.humidity + '%';
 
-
+    fragment.append(br);
     fragment.append(p_cityName);
     fragment.append(p_temperature);
     fragment.append(p_conditions);

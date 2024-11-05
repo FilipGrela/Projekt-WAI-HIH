@@ -1,5 +1,8 @@
 import $ from "jquery";
 import "jquery-ui/ui/widgets/dialog.js";
+import "jquery-ui/ui/widgets/tooltip.js"
+import "jquery-ui/themes/base/tooltip.css"
+// import "jquery-ui/themes/base/base.css"
 
 function load_menu_buttons(): void {
     let navbar:Element = <Element>document.querySelector('.navbar');
@@ -47,7 +50,7 @@ function addSendInformation(){
 
     const h1:HTMLHeadingElement = document.createElement("h1");
     $("#dialog").dialog({
-        closeText: "×"
+        closeText: "X"
     });
     h1.setAttribute("class", "form-sent-nortification");
     h1.textContent  = "Niedawno wysłano zgłoszenie!";
@@ -59,6 +62,9 @@ function addSendInformation(){
 
 }
 
+
+
 window.onload = () => {
     load_menu_buttons();
+    $('#form-container').tooltip();
 }

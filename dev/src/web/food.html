@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Filip Grela</title> 
+    <title>Filip Grela</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -30,7 +30,6 @@
             <a href="/">Strona główna</a>
             <a class="active" href="/food.html">Jedzenie</a>
             <a href="/gallery.html">Galeria</a>
-            <a href="#">About</a>
         </div>
     </nav>
     <div class="btn">
@@ -40,8 +39,7 @@
 
 <noscript>
     <link rel="stylesheet" href="css/noscript.css">
-
-    <div class="blur center">
+        <div class="blur center">
         <input type="checkbox" id="close-noscript-message">
         <div class="noscript-content content-container">
 
@@ -55,11 +53,12 @@
     </div>
 </noscript>
 
-<div id="dialog" title="Wysyłanie formularza">Twój formularz został wysłany!</div>
+<div id="dialog" title="Wysyłanie formularza" style="display: none">Twój formularz został wysłany!</div>
+<main>
 <section>
     <div class="hero-image center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/banners/food.jpg)">
         <div class="hero-text center">
-            <h1 style="font-size: 5rem">Kulinarna Podróż po Europie</h1>
+            <h2 style="font-size: 5rem">Kulinarna Podróż po Europie</h2>
         </div>
     </div>
 
@@ -438,6 +437,7 @@
         </table>
     </div>
 </section>
+</main>
 
 <section id="opinion-section">
     <div class="center">
@@ -451,7 +451,7 @@
 
                 <!-- Pole e-mail -->
                 <label for="email">*Adres e-mail:</label><br>
-                <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required><br><br>
+                <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" title="Podaj email aby ułatwić kontakt." required><br><br>
 
                 <!-- Pole lista rozwijana -->
                 <label for="recipe">*Który przepis wypróbowałeś:</label><br>
@@ -482,7 +482,7 @@
 
                 <!-- Pole obszaru tekstowego na opinię -->
                 <label for="opinion">*Twoja opinia:</label><br>
-                <textarea id="opinion" name="opinion" rows="4" cols="50" placeholder="Podziel się swoimi wrażeniami" required></textarea><br><br>
+                <textarea id="opinion" name="opinion" rows="4" cols="50" title="Twoja opinia jest dla nas naprawde ważna." placeholder="Podziel się swoimi wrażeniami" required></textarea><br><br>
 
                 <!-- Checkbox na zdjęcie -->
                 <label for="share">Czy polecisz przepis znajomemu?</label>
@@ -491,6 +491,10 @@
                 <!-- Pole daty -->
                 <label for="date">Data wypróbowania przepisu:</label><br>
                 <input type="date" id="date" name="date"><br><br>
+
+                <!-- Pole wiek-->
+<!--                <label for="spinner-age">Twój wiek:</label><br>-->
+<!--                <input type="number" id="spinner-age" placeholder="20" name="age"><br><br>-->
 
                 <!-- Przycisk wysyłania formularza -->
                 <button id="submit" type="submit">Wyślij opinię</button>
