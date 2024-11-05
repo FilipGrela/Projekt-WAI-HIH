@@ -16,22 +16,25 @@
 <body>
 <header>
     <a href="/" class="logo slide-in-right">Moje hobby</a>
-    <nav class="navbar">
-        <div class="btn">
-            <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
-        </div>
+    <nav class="navbar" style="z-index: 999">
+        <input type="checkbox" id="menu-toggle" value="0" hidden="hidden">
+        <label for="menu-toggle" class="btn slide-in-left menu-icon">
+            <div class="btn close-icon">
+                <img class="close-btn" alt="X" src="./img/icons/x-solid.svg">
+            </div>
+        </label>
+
         <div class="menu_items">
-<!--            <div class="dark-light-btn">-->
-<!--                <img class="filter-black-to-white"  src="/img/icons/night-mode.png" alt="Dark/Light mode">-->
-<!--            </div>-->
             <a href="/">Strona główna</a>
             <a href="/food.html">Jedzenie</a>
             <a class="active" href="/gallery.html">Galeria</a>
         </div>
     </nav>
-    <div class="btn">
-        <img  style="width:100%;" class="menu-btn" alt="Menu" src="img/icons/bars-solid.svg">
-    </div>
+
+    <!-- Label z ikoną menu -->
+    <label for="menu-toggle" class="btn slide-in-left menu-icon">
+        <img style="width:100%;" class="menu-btn" alt="Menu" src="img/icons/bars-solid.svg">
+    </label>
 </header>
 
 <noscript>

@@ -324,7 +324,12 @@ header .btn{
         padding-top: 70px;
     }
 
-    header .navbar.active2{
+    header .navbar.active2 {
+        right: 0;
+    }
+
+
+    .navbar:has(#menu-toggle:checked){
         right: 0;
     }
 
