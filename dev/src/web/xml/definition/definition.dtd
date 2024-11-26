@@ -1,0 +1,48 @@
+<!ENTITY % content-elements "(skladnik+ | zdjecie | opis | krok+)">
+<!ENTITY % difficulty "(proste | srednie | trudne | 1 | 2 | 3)">
+
+
+<!ELEMENT website (autor, page-title, zdjecie, potrawy, wiecej-link, spis-tresci, tabele)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT page-title (title, summary)>
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+        bold (true | false) #IMPLIED>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT zdjecie EMPTY>
+
+<!NOTATION jpeg PUBLIC "image/jpeg">
+<!NOTATION webp PUBLIC "image/webp">
+<!NOTATION png PUBLIC "image/png">
+<!ATTLIST zdjecie
+        text CDATA #IMPLIED
+        src CDATA #REQUIRED
+        typ NOTATION (jpeg | webp | png) #REQUIRED>
+<!ELEMENT potrawy (potrawa+)>
+<!ATTLIST potrawy
+        liczbaPotraw CDATA #IMPLIED>
+<!ELEMENT potrawa (%content-elements;)>
+<!ATTLIST potrawa
+        data-dodania CDATA #IMPLIED
+        nazwa CDATA #IMPLIED
+        typ CDATA #IMPLIED
+        trudnosc-przygotowania (%difficulty;) #IMPLIED>
+<!ELEMENT skladnik (#PCDATA)>
+<!ATTLIST skladnik
+        ilosc CDATA #IMPLIED
+        jednostka CDATA #IMPLIED>
+<!ELEMENT krok (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>
+<!ELEMENT wiecej-link (tytul, content)>
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT content (przepisy-link)>
+<!ATTLIST content
+        text CDATA #IMPLIED>
+<!ELEMENT przepisy-link (#PCDATA)>
+<!ATTLIST przepisy-link
+        href CDATA #IMPLIED>
+<!ELEMENT spis-tresci (#PCDATA)>
+<!ELEMENT tabele (head, row+)>
+<!ELEMENT head (line+)>
+<!ELEMENT row (line+)>
+<!ELEMENT line (#PCDATA)>

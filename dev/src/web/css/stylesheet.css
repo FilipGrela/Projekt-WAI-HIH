@@ -263,7 +263,9 @@ header .navbar a {
 }
 header .navbar .active, a:hover{
     background: var(--color-secondary);
-    color: var(--color-accent-1);
+    color: var(
+
+    );
     transition-duration: 0.5s;
 }
 
