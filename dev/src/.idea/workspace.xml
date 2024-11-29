@@ -30,7 +30,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "javascript.nodejs.core.library.configured.version": "20.18.0",
-    "javascript.nodejs.core.library.typings.version": "20.16.11",
+    "javascript.nodejs.core.library.typings.version": "20.17.9",
     "last_opened_file_path": "C:/Studia/Programowanie/VirtualBox/shared-folder-wai",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -51,7 +51,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
       </set>
     </attachedChunks>
   </component>
@@ -69,6 +69,7 @@
       <workItem from="1728994611541" duration="128000" />
       <workItem from="1729012168705" duration="5000" />
       <workItem from="1729015992998" duration="4194000" />
+      <workItem from="1732893602034" duration="433000" />
     </task>
     <servers />
   </component>

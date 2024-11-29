@@ -70,7 +70,9 @@
     <xs:wiecej-link>
         <tytul>Chcesz więcej przepisów?</tytul>
         <content xs:text="Znajdzesz je klikajc ">
-            <przepisy-link xs:href="https://www.przepisy.pl/">TUTAJ</przepisy-link>
+            <przepisy-link xs:href="https://www.przepisy.pl/">
+                <opis>Kliknij tutaj</opis>
+            </przepisy-link>
         </content>
     </xs:wiecej-link>
 

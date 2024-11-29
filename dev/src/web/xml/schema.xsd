@@ -108,13 +108,20 @@
         <xs:attribute ref="ex:text" use="required"/>
     </xs:complexType>
 
+
+
 <!--    Globalny typ złożony-->
     <xs:complexType name="przepisy-link">
-        <xs:simpleContent>
-            <xs:extension base="xs:string">
-                <xs:attribute name="href" type="xs:anyURI" use="required"/>
-            </xs:extension>
-        </xs:simpleContent>
+        <xs:sequence>
+            <xs:element name="opis" type="przepisy-opis"/>
+        </xs:sequence>
+        <xs:attribute name="href" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="przepisy-opis">
+        <xs:complexContent>
+            <xs:extension base="xs:string" />
+        </xs:complexContent>
     </xs:complexType>
 
 <!--    Globalny typ złożony-->
